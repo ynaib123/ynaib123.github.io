@@ -170,6 +170,14 @@ section{position:relative;padding:130px 0}
 .badge-render b{width:7px;height:7px;border-radius:50%;background:var(--admin);animation:pulse 1.6s infinite}
 @keyframes pulse{50%{opacity:.3}}
 
+/* autres modules de l'administration */
+.caps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.cap{background:linear-gradient(180deg,var(--surface),rgba(14,22,38,.4));border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:border-color .3s,transform .4s var(--ease)}
+.cap:hover{border-color:rgba(245,177,74,.45);transform:translateY(-3px)}
+.cap .n{font-family:var(--display);font-size:13px;color:var(--admin);letter-spacing:.1em}
+.cap h4{font-size:1.1rem;margin:8px 0 10px}
+.cap p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
+
 /* défis et solutions */
 .challenges{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:56px}
 .ch{position:relative;background:linear-gradient(180deg,var(--surface),rgba(14,22,38,.4));border:1px solid var(--line);border-radius:var(--radius);padding:32px;overflow:hidden}
@@ -256,6 +264,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .ops{grid-template-columns:repeat(2,1fr)}
   .stats{grid-template-columns:repeat(2,1fr)}
   .skills{grid-template-columns:repeat(2,1fr)}
+  .caps{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:640px){
   .wrap{padding:0 16px}
@@ -264,7 +273,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .stage{height:290px}
   .l-phone{width:96px;top:130px}
   .l-shop{top:96px}
-  .others,.skills,.ops{grid-template-columns:1fr}
+  .others,.skills,.ops,.caps{grid-template-columns:1fr}
   .stats strong{font-size:2.1rem}
   .card{padding:24px}
   .marquee span{font-size:18px}
@@ -305,6 +314,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .step .shot-m.ph{width:38%}
   .chips li{background:var(--surface2);color:var(--text)}
   .archi{break-before:page}
+  .caps{grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px}.cap{padding:10px;break-inside:avoid;background:#fff}.cap h4{font-size:12px;margin:2px 0 4px}.cap p{font-size:10px}
   .challenges{margin-top:12px;gap:10px}.ch{padding:12px;break-inside:avoid;background:#fff}.ch::before{font-size:40px}.ch h3{font-size:13px;margin-bottom:6px}.ch dd{font-size:10.5px}.ch .chips{margin-top:8px}
   #defis{break-before:page;padding-top:0!important}
   .video-scene,.phone video{display:none}
@@ -412,9 +422,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
       <div class="stats rv">
         <div><strong data-count="2">2</strong><span data-l="fr">applications React : client et admin</span><span data-l="en">React apps: storefront and admin</span></div>
-        <div><strong data-count="41">41</strong><span data-l="fr">migrations de base de données</span><span data-l="en">database migrations</span></div>
-        <div><strong data-count="7">7</strong><span data-l="fr">modèles de vidéos publicitaires</span><span data-l="en">ad-video templates</span></div>
-        <div><strong data-count="280" data-suffix="+">280+</strong><span data-l="fr">commits depuis mars 2026</span><span data-l="en">commits since March 2026</span></div>
+        <div><strong data-count="47">47</strong><span data-l="fr">migrations de base de données</span><span data-l="en">database migrations</span></div>
+        <div><strong data-count="10">10</strong><span data-l="fr">modèles de vidéos publicitaires</span><span data-l="en">ad-video templates</span></div>
+        <div><strong data-count="310" data-suffix="+">310+</strong><span data-l="fr">commits depuis mars 2026</span><span data-l="en">commits since March 2026</span></div>
       </div>
 
       <!-- Partie client -->
@@ -480,7 +490,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
             <span data-l="en">The whole business, run from a single tool.</span>
           </h3>
         </div>
-        <ul class="chips rv d2"><li>React</li><li>Spring Security</li><li>JWT</li><li>Meta Graph API</li></ul>
+        <ul class="chips rv d2"><li>React</li><li>Spring Security</li><li>JWT</li><li>Meta Graph API</li><li>TikTok API</li></ul>
       </div>
       <div class="story admin" data-story>
         <div class="steps">
@@ -499,13 +509,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <div class="step">
             <span class="n">03</span>
             <h4><span data-l="fr">Le catalogue</span><span data-l="en">The catalogue</span></h4>
-            <p><span data-l="fr">Produits, prix, promotions et stock, mise en ligne en un clic et import Excel. Rôles et journal d'activité pour encadrer chaque administrateur.</span><span data-l="en">Products, prices, promotions and stock, one-click publishing and Excel import. Roles and an activity log keep each admin in check.</span></p>
+            <p><span data-l="fr">Produits, prix, promotions et stock, mise en ligne en un clic et import Excel. Rôles, journal d'activité et double authentification pour encadrer chaque administrateur.</span><span data-l="en">Products, prices, promotions and stock, one-click publishing and Excel import. Roles, an activity log and two-factor authentication keep each admin in check.</span></p>
             <img class="shot-m" src="img/admin-products.jpg" alt="" loading="lazy">
           </div>
           <div class="step">
             <span class="n">04</span>
             <h4><span data-l="fr">Le studio publicitaire</span><span data-l="en">The ad studio</span></h4>
-            <p><span data-l="fr">Vidéos générées à partir d'un produit : 7 modèles, sous-titres, voix off, son normalisé. Publication Instagram / Facebook, détourage d'images et effet de relief. Ci-contre, une vraie vidéo sortie du moteur de rendu.</span><span data-l="en">Videos generated from a product: 7 templates, captions, voice-over, loudness normalisation. Instagram / Facebook publishing, image cut-out and depth-parallax effect. Shown here: a real video straight out of the rendering engine.</span></p>
+            <p><span data-l="fr">Vidéos générées à partir d'un produit : 10 modèles, montage sur frise, images clés, sous-titres, voix off, son normalisé. Publication Instagram / Facebook / TikTok, détourage et amélioration d'images. Ci-contre, une vraie vidéo sortie du moteur de rendu.</span><span data-l="en">Videos generated from a product: 10 templates, timeline editing, keyframes, captions, voice-over, loudness normalisation. Instagram / Facebook / TikTok publishing, image cut-out and enhancement. Shown here: a real video straight out of the rendering engine.</span></p>
             <div class="shot-m ph phone"><video src="img/ad-demo.mp4" poster="img/ad-poster.jpg" muted loop playsinline preload="none" aria-label="Vidéo publicitaire générée par TechZone"></video></div>
           </div>
         </div>
@@ -527,6 +537,44 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <div class="dots"><i class="on"></i><i></i><i></i><i></i></div>
           <p class="caption"><span data-l="fr">Clients et chiffres fictifs, pour protéger les vraies données.</span><span data-l="en">Customers and figures are fictitious, to protect real data.</span></p>
         </div>
+      </div>
+
+      <!-- Tout ce que couvre l'administration -->
+      <div class="story-head">
+        <div>
+          <span class="tag admin rv"><span data-l="fr">Et aussi</span><span data-l="en">And more</span></span>
+          <h3 class="rv d1">
+            <span data-l="fr">Huit autres modules, du client au réseau social.</span>
+            <span data-l="en">Eight more modules, from customer to social network.</span>
+          </h3>
+        </div>
+        <ul class="chips rv d2"><li>Sendit</li><li>Meta API</li><li>TikTok API</li><li>Remotion</li></ul>
+      </div>
+      <div class="caps">
+        <article class="cap rv"><span class="n">01</span>
+          <h4><span data-l="fr">Clients et liste noire</span><span data-l="en">Customers and blacklist</span></h4>
+          <p><span data-l="fr">Un client par téléphone : commandes, livrées, refusées, taux de refus. Filtres fidèles / à risque ; « Signaler » ou « Bloquer » depuis la liste noire, la boutique refuse alors la commande.</span><span data-l="en">One customer per phone number: orders, delivered, refused, refusal rate. Loyal / at-risk filters; "Flag" or "Block" from the blacklist, and the shop then refuses the order.</span></p></article>
+        <article class="cap rv d1"><span class="n">02</span>
+          <h4><span data-l="fr">Retours et garanties</span><span data-l="en">Returns and warranty</span></h4>
+          <p><span data-l="fr">Refus, retour, échange, garantie. Un refus du transporteur ouvre un retour tout seul ; à la réception, le bon état retourne en stock et le défectueux en sort.</span><span data-l="en">Refusals, returns, exchanges, warranty. A carrier refusal opens a return by itself; on receipt, good items go back to stock and defective ones are written off.</span></p></article>
+        <article class="cap rv d2"><span class="n">03</span>
+          <h4><span data-l="fr">Encaissements Sendit</span><span data-l="en">Sendit payouts</span></h4>
+          <p><span data-l="fr">Argent à recevoir des colis livrés, colis impayés depuis plus de 10 jours, import du relevé (CSV ou Excel, colonnes reconnues seules) et détection des écarts de montant et de frais.</span><span data-l="en">Cash due from delivered parcels, parcels unpaid for over 10 days, statement import (CSV or Excel, columns auto-detected) and detection of amount and fee gaps.</span></p></article>
+        <article class="cap rv d3"><span class="n">04</span>
+          <h4><span data-l="fr">Tarifs de livraison</span><span data-l="en">Delivery rates</span></h4>
+          <p><span data-l="fr">Tarifs par destination lus en direct chez Sendit, comparés à la médiane, avec alertes : tarif absent ou à 0, très éloigné, changé depuis un envoi, frais facturés différents.</span><span data-l="en">Per-destination rates read live from Sendit, compared with the median, with alerts: missing or zero rate, far from the median, changed since a shipment, different billed fees.</span></p></article>
+        <article class="cap rv"><span class="n">05</span>
+          <h4><span data-l="fr">Codes promo</span><span data-l="en">Promo codes</span></h4>
+          <p><span data-l="fr">Pourcentage avec plafond ou montant fixe, minimum d'achat, dates et nombre d'utilisations. La remise est calculée et appliquée par le serveur, jamais par le navigateur.</span><span data-l="en">Percentage with a cap or fixed amount, minimum basket, dates and usage limit. The discount is computed and applied by the server, never by the browser.</span></p></article>
+        <article class="cap rv d1"><span class="n">06</span>
+          <h4><span data-l="fr">Promotion Instagram et Facebook</span><span data-l="en">Instagram and Facebook promotion</span></h4>
+          <p><span data-l="fr">Publication et promotion payante depuis l'admin, pixel et API de conversions, ventes attribuées par UTM, suppression synchronisée avec les réseaux et alerte si le produit promu a changé.</span><span data-l="en">Publishing and paid promotion from the admin, pixel and Conversions API, sales attributed through UTM, deletion synced with the networks and an alert when the promoted product changed.</span></p></article>
+        <article class="cap rv d2"><span class="n">07</span>
+          <h4>TikTok</h4>
+          <p><span data-l="fr">Pixel et Events API côté serveur (téléphone haché, événements dédoublonnés), connexion OAuth et publication directe avec la légende, dans la même fenêtre « Publier » qu'Instagram et Facebook.</span><span data-l="en">Pixel and server-side Events API (hashed phone, deduplicated events), OAuth connection and direct posting with the caption, from the same "Publish" dialog as Instagram and Facebook.</span></p></article>
+        <article class="cap rv d3"><span class="n">08</span>
+          <h4><span data-l="fr">Montage vidéo sur frise</span><span data-l="en">Timeline video editor</span></h4>
+          <p><span data-l="fr">10 modèles, images clés, annuler / rétablir, enregistrement automatique, plusieurs musiques et voix off, vidéos importées, aperçu rendu par le vrai moteur et onglet « Vérifier » qui repère les défauts avant publication.</span><span data-l="en">10 templates, keyframes, undo / redo, autosave, multiple music and voice-over tracks, imported clips, previews rendered by the real engine and a "Check" tab that flags problems before publishing.</span></p></article>
       </div>
     </div>
   </section>
