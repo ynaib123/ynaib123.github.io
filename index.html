@@ -238,6 +238,7 @@ section{position:relative;padding:130px 0}
 .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:22px 28px;margin-top:48px}
 .skill{border-top:1px solid var(--line2);padding-top:20px}
 .skill h4{font-size:1rem;margin:0 0 14px;font-weight:600}
+.skill p.path{margin:0;color:var(--muted);font-size:.92rem;line-height:1.55}
 
 /* contact */
 .contact{text-align:center;padding:170px 0 140px;overflow:hidden}
@@ -431,7 +432,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
       <div class="stats rv">
         <div><strong data-count="2">2</strong><span data-l="fr">applications React : client et admin</span><span data-l="en">React apps: storefront and admin</span></div>
-        <div><strong data-count="55">55</strong><span data-l="fr">migrations de base de données</span><span data-l="en">database migrations</span></div>
+        <div><strong data-count="50" data-suffix="+">50+</strong><span data-l="fr">migrations de base de données</span><span data-l="en">database migrations</span></div>
         <div><strong data-count="10">10</strong><span data-l="fr">modèles de vidéos publicitaires</span><span data-l="en">ad-video templates</span></div>
         <div><strong data-count="400" data-suffix="+">400+</strong><span data-l="fr">commits depuis mars 2026</span><span data-l="en">commits since March 2026</span></div>
       </div>
@@ -553,11 +554,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <div>
           <span class="tag admin rv"><span data-l="fr">Et aussi</span><span data-l="en">And more</span></span>
           <h3 class="rv d1">
-            <span data-l="fr">Huit autres modules, du client au réseau social.</span>
-            <span data-l="en">Eight more modules, from customer to social network.</span>
+            <span data-l="fr">Douze autres modules, du client au réseau social.</span>
+            <span data-l="en">Twelve more modules, from customer to social network.</span>
           </h3>
         </div>
-        <ul class="chips rv d2"><li>Sendit</li><li>Meta API</li><li>TikTok API</li><li>Remotion</li></ul>
+        <ul class="chips rv d2"><li>Sendit</li><li>Meta API</li><li>TikTok API</li><li>WhatsApp Cloud API</li><li>Claude API</li><li>Remotion</li></ul>
       </div>
       <div class="caps">
         <article class="cap rv"><span class="n">01</span>
@@ -584,6 +585,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <article class="cap rv d3"><span class="n">08</span>
           <h4><span data-l="fr">Montage vidéo sur frise</span><span data-l="en">Timeline video editor</span></h4>
           <p><span data-l="fr">10 modèles, images clés, annuler / rétablir, enregistrement automatique, plusieurs musiques et voix off, vidéos importées, aperçu rendu par le vrai moteur et onglet « Vérifier » qui repère les défauts avant publication.</span><span data-l="en">10 templates, keyframes, undo / redo, autosave, multiple music and voice-over tracks, imported clips, previews rendered by the real engine and a "Check" tab that flags problems before publishing.</span></p></article>
+        <article class="cap rv"><span class="n">09</span>
+          <h4><span data-l="fr">Assistant WhatsApp avec IA</span><span data-l="en">AI WhatsApp assistant</span></h4>
+          <p><span data-l="fr">API WhatsApp Cloud et Claude (API Anthropic) avec des outils branchés sur la vraie base : prix, stock, suivi de commande, photos, boutons de choix, et prise de commande après récapitulatif validé par le client. Relais vers l'équipe, garde-fous anti-abus et coût de l'IA suivi en direct.</span><span data-l="en">WhatsApp Cloud API and Claude (Anthropic API) with tools wired to the real database: prices, stock, order tracking, photos, choice buttons, and order taking once the customer approves a recap. Hand-off to the team, abuse guards and live AI cost tracking.</span></p></article>
+        <article class="cap rv d1"><span class="n">10</span>
+          <h4><span data-l="fr">Confirmation des commandes</span><span data-l="en">Order confirmation</span></h4>
+          <p><span data-l="fr">File d'appels avec le résultat de chaque appel, confirmation par message WhatsApp, et taux de confirmation et de livraison par produit, par ville et par source.</span><span data-l="en">Call queue with the outcome of each call, confirmation by WhatsApp message, and confirmation and delivery rates by product, city and source.</span></p></article>
+        <article class="cap rv d2"><span class="n">11</span>
+          <h4><span data-l="fr">Suivi de commande</span><span data-l="en">Order tracking</span></h4>
+          <p><span data-l="fr">Le client suit son colis depuis la boutique, sans compte, avec son numéro de commande et son téléphone ; bouton WhatsApp direct sur chaque fiche produit.</span><span data-l="en">Customers track their parcel from the shop, with no account, using their order number and phone; a direct WhatsApp button on every product page.</span></p></article>
+        <article class="cap rv d3"><span class="n">12</span>
+          <h4><span data-l="fr">Fournisseurs et comptabilité</span><span data-l="en">Suppliers and accounting</span></h4>
+          <p><span data-l="fr">Chaque produit rattaché à son fournisseur, dépenses et recettes en comptabilité, et tableau de bord des ventes par ville et par catégorie avec la marge des campagnes.</span><span data-l="en">Every product linked to its supplier, income and expenses in the accounts, and a sales dashboard by city and category with campaign margins.</span></p></article>
       </div>
     </div>
   </section>
@@ -837,10 +850,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <h3><span data-l="fr">Réservation d'hôtel</span><span data-l="en">Hotel booking</span></h3>
           <p class="sub"><span data-l="fr">Application .NET, projet de cours</span><span data-l="en">.NET application, course project</span></p>
           <p>
-            <span data-l="fr">Application de réservation en C# : API back-end avec migrations, interface d'administration et interface client.</span>
-            <span data-l="en">C# booking application: back-end API with migrations, admin interface and customer interface.</span>
+            <span data-l="fr">Réservations avec disponibilités en temps réel : API ASP.NET Core avec migrations Entity Framework sur SQL Server, administration de bureau en WPF et site client.</span>
+            <span data-l="en">Bookings with real-time availability: ASP.NET Core API with Entity Framework migrations on SQL Server, a WPF desktop admin and a customer website.</span>
           </p>
-          <ul class="chips"><li>C#</li><li>.NET</li><li>Entity Framework</li></ul>
+          <ul class="chips"><li>C#</li><li>ASP.NET Core</li><li>WPF</li><li>Entity Framework</li><li>SQL Server</li></ul>
           <a class="go" href="https://github.com/ynaib123/Projet.NET" target="_blank" rel="noopener">GitHub ↗</a>
         </article>
       </div>
@@ -857,7 +870,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <div class="skill rv d2"><h4><span data-l="fr">Données</span><span data-l="en">Data</span></h4><ul class="chips"><li>PostgreSQL</li><li>Redis</li><li>Flyway</li></ul></div>
         <div class="skill rv"><h4>DevOps</h4><ul class="chips"><li>Docker</li><li>GitHub Actions</li><li>Caddy</li><li>Linux</li></ul></div>
         <div class="skill rv d1"><h4><span data-l="fr">Qualité</span><span data-l="en">Quality</span></h4><ul class="chips"><li>Testcontainers</li><li>Playwright</li><li>ESLint</li></ul></div>
-        <div class="skill rv d2"><h4><span data-l="fr">Langues</span><span data-l="en">Languages</span></h4><ul class="chips"><li>Français</li><li>English</li></ul></div>
+        <div class="skill rv d2"><h4><span data-l="fr">Langues</span><span data-l="en">Languages</span></h4><ul class="chips"><li><span data-l="fr">Arabe (maternelle)</span><span data-l="en">Arabic (native)</span></li><li><span data-l="fr">Français (courant)</span><span data-l="en">French (fluent)</span></li><li><span data-l="fr">Anglais (courant)</span><span data-l="en">English (fluent)</span></li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parcours -->
+  <section style="padding-top:0" id="parcours">
+    <div class="wrap">
+      <div class="kicker rv"><span data-l="fr">Parcours</span><span data-l="en">Background</span></div>
+      <div class="skills">
+        <div class="skill rv"><h4><span data-l="fr">Cycle ingénieur · EMSI Marrakech</span><span data-l="en">Engineering degree · EMSI Marrakech</span></h4><p class="path"><span data-l="fr">Informatique et Réseaux, option Développement digital et Système d'information. 2023 – 2027.</span><span data-l="en">Computer Science and Networks, Digital Development and Information Systems track. 2023 – 2027.</span></p></div>
+        <div class="skill rv d1"><h4><span data-l="fr">Stage · Pharmacie Varenne, El Jadida</span><span data-l="en">Internship · Pharmacie Varenne, El Jadida</span></h4><p class="path"><span data-l="fr">Application de gestion des stocks, conçue en UML et développée en C# / .NET. Juillet 2024.</span><span data-l="en">Stock management application, designed in UML and built in C# / .NET. July 2024.</span></p></div>
+        <div class="skill rv d2"><h4><span data-l="fr">Fondateur · TechZone Maroc</span><span data-l="en">Founder · TechZone Maroc</span></h4><p class="path"><span data-l="fr">Conception, développement et exploitation de deux boutiques en production. Depuis mars 2026.</span><span data-l="en">Design, development and operation of two live stores. Since March 2026.</span></p></div>
       </div>
     </div>
   </section>
@@ -872,15 +897,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <span data-l="en">Let's build something <span class="grad">together</span>.</span>
       </h2>
       <p class="rv d2">
-        <span data-l="fr">Ouvert aux stages, alternances et premiers postes en développement.</span>
-        <span data-l="en">Open to internships, work-study and junior developer roles.</span>
+        <span data-l="fr">À la recherche d'un stage PFE de 4 à 6 mois, dès le 1er février 2027. Basé à Marrakech.</span>
+        <span data-l="en">Looking for a 4–6 month final-year internship (PFE) starting 1 February 2027. Based in Marrakech, Morocco.</span>
       </p>
       <div class="cta rv d3">
-        <a class="btn primary mag" href="mailto:youssefnaib6@gmail.com">✉ youssefnaib6@gmail.com</a>
+        <a class="btn primary mag" href="mailto:youssefnaib46@gmail.com">✉ youssefnaib46@gmail.com</a>
+        <a class="btn ghost mag" href="tel:+212623147877">☏ +212 6 23 14 78 77</a>
+        <a class="btn ghost mag" href="CV-Youssef-Naib-FR.pdf" data-l="fr" download>CV (PDF) ↓</a>
+        <a class="btn ghost mag" href="CV-Youssef-Naib-EN.pdf" data-l="en" download>Résumé (PDF) ↓</a>
         <a class="btn ghost mag" href="https://www.linkedin.com/in/naib-youssef-8340442a9" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a class="btn ghost mag" href="https://github.com/ynaib123" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
-      <p class="print-only">Youssef Naib · youssefnaib6@gmail.com · linkedin.com/in/naib-youssef-8340442a9 · github.com/ynaib123 · techzone-maroc.com · rawabeauty.com</p>
+      <p class="print-only">Youssef Naib · youssefnaib46@gmail.com · +212 6 23 14 78 77 · Marrakech · linkedin.com/in/naib-youssef-8340442a9 · github.com/ynaib123 · techzone-maroc.com · rawabeauty.com</p>
     </div>
   </section>
 </main>
