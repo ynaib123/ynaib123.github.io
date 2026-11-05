@@ -169,6 +169,13 @@ section{position:relative;padding:130px 0}
 .badge-render{position:absolute;right:16px;bottom:16px;display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--admin);background:rgba(10,16,29,.8);border:1px solid rgba(245,177,74,.35);border-radius:999px;padding:5px 12px;backdrop-filter:blur(6px)}
 .badge-render b{width:7px;height:7px;border-radius:50%;background:var(--admin);animation:pulse 1.6s infinite}
 @keyframes pulse{50%{opacity:.3}}
+/* Rawa Beauty : même mise en page, accent rose */
+.feature.rawa{--rose:#f472b6;padding-top:150px;background:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(244,114,182,.14),transparent 70%)}
+.feature.rawa .kicker{color:var(--rose)}
+.feature.rawa .story{--c:var(--rose)}
+.feature.rawa .story.admin{--c:var(--admin)}
+.tag.rose{color:var(--rose);background:rgba(244,114,182,.1);border:1px solid rgba(244,114,182,.3)}
+.feature.rawa .phone-scene{background:radial-gradient(circle at 50% 40%,rgba(244,114,182,.3),transparent 60%),#0b1220}
 
 /* autres modules de l'administration */
 .caps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
@@ -317,6 +324,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .caps{grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px}.cap{padding:10px;break-inside:avoid;background:#fff}.cap h4{font-size:12px;margin:2px 0 4px}.cap p{font-size:10px}
   .challenges{margin-top:12px;gap:10px}.ch{padding:12px;break-inside:avoid;background:#fff}.ch::before{font-size:40px}.ch h3{font-size:13px;margin-bottom:6px}.ch dd{font-size:10.5px}.ch .chips{margin-top:8px}
   #defis{break-before:page;padding-top:0!important}
+  #rawa{break-before:page;padding-top:0!important;background:none}
   .video-scene,.phone video{display:none}
   .step .shot-m.ph.phone{background:url(img/ad-poster.jpg) center/cover;aspect-ratio:9/16;border:0}
   .flow{margin-top:14px}
@@ -350,6 +358,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </a>
     <nav aria-label="Sections">
       <a href="#techzone">TechZone</a>
+      <a href="#rawa">Rawa Beauty</a>
       <a href="#architecture">Architecture</a>
       <a href="#projets"><span data-l="fr">Projets</span><span data-l="en">Projects</span></a>
       <a href="#contact">Contact</a>
@@ -374,8 +383,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <span data-l="en"><span class="w"><span>I&nbsp;build</span></span> <span class="w"><span><span class="grad">complete</span>&nbsp;web</span></span> <span class="w"><span>products,</span></span> <span class="w"><span>from&nbsp;server</span></span> <span class="w"><span>to&nbsp;screen.</span></span></span>
         </h1>
         <p class="lead rv d2">
-          <span data-l="fr">Développeur full-stack : API Java, interfaces React, données, déploiement et sécurité. Mon projet phare est une boutique en ligne réelle, en production, avec son administration.</span>
-          <span data-l="en">Full-stack developer: Java APIs, React interfaces, data, deployment and security. My flagship project is a real online shop running in production, with its own admin back office.</span>
+          <span data-l="fr">Développeur full-stack : API Java, interfaces React, données, déploiement et sécurité. Mon projet phare est une boutique en ligne réelle, en production, avec son administration, et une deuxième boutique, Rawa Beauty, tourne sur le même code.</span>
+          <span data-l="en">Full-stack developer: Java APIs, React interfaces, data, deployment and security. My flagship project is a real online shop running in production, with its own admin back office, and a second store, Rawa Beauty, runs on the same code.</span>
         </p>
         <div class="cta rv d3">
           <a class="btn primary mag" href="#techzone"><span data-l="fr">Découvrir TechZone</span><span data-l="en">Explore TechZone</span> →</a>
@@ -422,9 +431,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
       <div class="stats rv">
         <div><strong data-count="2">2</strong><span data-l="fr">applications React : client et admin</span><span data-l="en">React apps: storefront and admin</span></div>
-        <div><strong data-count="47">47</strong><span data-l="fr">migrations de base de données</span><span data-l="en">database migrations</span></div>
+        <div><strong data-count="55">55</strong><span data-l="fr">migrations de base de données</span><span data-l="en">database migrations</span></div>
         <div><strong data-count="10">10</strong><span data-l="fr">modèles de vidéos publicitaires</span><span data-l="en">ad-video templates</span></div>
-        <div><strong data-count="310" data-suffix="+">310+</strong><span data-l="fr">commits depuis mars 2026</span><span data-l="en">commits since March 2026</span></div>
+        <div><strong data-count="400" data-suffix="+">400+</strong><span data-l="fr">commits depuis mars 2026</span><span data-l="en">commits since March 2026</span></div>
       </div>
 
       <!-- Partie client -->
@@ -579,6 +588,141 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </div>
   </section>
 
+  <!-- Deuxième boutique -->
+  <section class="feature rawa" id="rawa">
+    <div class="wrap">
+      <div class="feature-head">
+        <div>
+          <div class="kicker rv"><span data-l="fr">Projet · 02</span><span data-l="en">Project · 02</span></div>
+          <h2 class="sec-title rv d1">Rawa Beauty</h2>
+          <p class="sec-lead rv d2">
+            <span data-l="fr">Une boutique de beauté pour la Libye, construite sur le même code que TechZone : arabe par défaut avec l'anglais en un clic, dinar libyen, livraison Shipeh, et sa propre identité visuelle, claire et immersive.</span>
+            <span data-l="en">A beauty store for Libya, built on the same code as TechZone: Arabic by default with English one click away, Libyan dinar, Shipeh delivery, and its own light, immersive visual identity.</span>
+          </p>
+        </div>
+        <div class="rv d2" style="display:flex;flex-direction:column;align-items:flex-start;gap:14px">
+          <span class="live"><b></b><span data-l="fr">En production</span><span data-l="en">Live in production</span></span>
+          <a class="btn ghost mag" href="https://rawabeauty.com" target="_blank" rel="noopener">rawabeauty.com ↗</a>
+        </div>
+      </div>
+
+      <div class="stats rv">
+        <div><strong data-count="1">1</strong><span data-l="fr">base de code pour les deux boutiques</span><span data-l="en">codebase for both stores</span></div>
+        <div><strong data-count="2">2</strong><span data-l="fr">langues : arabe (de droite à gauche) et anglais</span><span data-l="en">languages: Arabic (right to left) and English</span></div>
+        <div><strong data-count="0">0</strong><span data-l="fr">différence visuelle sur TechZone, vérifiée automatiquement</span><span data-l="en">visual changes to TechZone, checked automatically</span></div>
+        <div><strong data-count="3">3</strong><span data-l="fr">tailles de photo d'ouverture, selon l'écran</span><span data-l="en">hero photo sizes, picked per screen</span></div>
+      </div>
+
+      <!-- Partie client -->
+      <div class="story-head">
+        <div>
+          <span class="tag rose rv"><span data-l="fr">Partie client</span><span data-l="en">Storefront</span></span>
+          <h3 class="rv d1">
+            <span data-l="fr">Une vitrine qui donne envie, en arabe comme en anglais.</span>
+            <span data-l="en">A storefront that makes you want to buy, in Arabic and English.</span>
+          </h3>
+        </div>
+        <ul class="chips rv d2"><li>React 19</li><li>RTL</li><li>i18n</li><li>CSS animations</li></ul>
+      </div>
+      <div class="story client" data-story>
+        <div class="steps">
+          <div class="step">
+            <span class="n">01</span>
+            <h4><span data-l="fr">Une ouverture plein écran</span><span data-l="en">A full-screen opening</span></h4>
+            <p><span data-l="fr">Une photo de mise en scène sur toute la largeur, avec l'ombre d'une palme, un rayon de lumière et des pétales. Animations en transform et opacité seulement, mises en pause hors de l'écran : aucune lenteur.</span><span data-l="en">A full-width staged photo with a drifting palm shadow, a light beam and falling petals. Animations use only transform and opacity and pause off screen, so nothing feels slow.</span></p>
+            <img class="shot-m" src="img/rawa-home.jpg" alt="" loading="lazy">
+          </div>
+          <div class="step">
+            <span class="n">02</span>
+            <h4><span data-l="fr">Arabe d'abord, anglais en un clic</span><span data-l="en">Arabic first, English in one click</span></h4>
+            <p><span data-l="fr">Toute la page passe de droite à gauche, photo comprise. Les catégories s'affichent en arabe pendant que les liens et les filtres gardent le même nom en base.</span><span data-l="en">The whole page flips right to left, photo included. Categories show in Arabic while links and filters keep the same name in the database.</span></p>
+            <img class="shot-m" src="img/rawa-home-en.jpg" alt="" loading="lazy">
+          </div>
+          <div class="step">
+            <span class="n">03</span>
+            <h4><span data-l="fr">Les catégories en un coup d'œil</span><span data-l="en">Categories at a glance</span></h4>
+            <p><span data-l="fr">Cinq univers sur une seule ligne, en arches photo, puis les nouveautés avec un ajout au panier direct.</span><span data-l="en">Five worlds on a single row as photo arches, then the latest products with direct add to cart.</span></p>
+            <img class="shot-m" src="img/rawa-catalog.jpg" alt="" loading="lazy">
+          </div>
+          <div class="step">
+            <span class="n">04</span>
+            <h4><span data-l="fr">Une fiche produit comme une landing page</span><span data-l="en">A product page built like a landing page</span></h4>
+            <p><span data-l="fr">Prix, économie, stock et achat en haut, puis une description mise en scène : accroche, points forts alternés avec les photos d'utilisation ajoutées depuis l'admin, étapes d'utilisation et barre d'achat qui suit le défilement.</span><span data-l="en">Price, savings, stock and buy buttons up top, then a staged description: a headline, key points alternating with usage photos added from the admin, how-to steps and a buy bar that follows the scroll.</span></p>
+            <img class="shot-m" src="img/rawa-product.jpg" alt="" loading="lazy">
+          </div>
+          <div class="step">
+            <span class="n">05</span>
+            <h4><span data-l="fr">Pensée pour le téléphone</span><span data-l="en">Designed for the phone</span></h4>
+            <p><span data-l="fr">Sur téléphone, le texte passe au-dessus et une photo verticale dédiée prend le relais, plus légère à charger.</span><span data-l="en">On phones, the text moves to the top and a dedicated portrait photo takes over, lighter to load.</span></p>
+            <img class="shot-m ph" src="img/rawa-mobile.jpg" alt="" loading="lazy">
+          </div>
+        </div>
+        <div class="view">
+          <div class="glow"></div>
+          <div class="dev">
+            <div class="chrome"><span></span><span></span><span></span><em>rawabeauty.com</em></div>
+            <div class="screens">
+              <img class="on" src="img/rawa-home.jpg" alt="Rawa Beauty — page d'accueil en arabe" loading="lazy">
+              <img src="img/rawa-home-en.jpg" alt="Rawa Beauty — page d'accueil en anglais" loading="lazy">
+              <img src="img/rawa-catalog.jpg" alt="Rawa Beauty — catégories" loading="lazy">
+              <img src="img/rawa-product.jpg" alt="Rawa Beauty — fiche produit" loading="lazy">
+              <div class="phone-scene"><div class="phone"><img src="img/rawa-mobile.jpg" alt="Rawa Beauty — version mobile" loading="lazy"></div></div>
+            </div>
+          </div>
+          <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+          <p class="caption"><span data-l="fr">Captures du site en ligne.</span><span data-l="en">Screenshots of the live site.</span></p>
+        </div>
+      </div>
+
+      <!-- Partie admin -->
+      <div class="story-head">
+        <div>
+          <span class="tag admin rv"><span data-l="fr">Partie administration</span><span data-l="en">Admin back office</span></span>
+          <h3 class="rv d1">
+            <span data-l="fr">La même administration, réglée pour un autre pays.</span>
+            <span data-l="en">The same back office, set up for another country.</span>
+          </h3>
+        </div>
+        <ul class="chips rv d2"><li>Multi-marque</li><li>LYD</li><li>Shipeh</li></ul>
+      </div>
+      <div class="story admin" data-story>
+        <div class="steps">
+          <div class="step">
+            <span class="n">01</span>
+            <h4><span data-l="fr">Une marque, une configuration</span><span data-l="en">One brand, one configuration</span></h4>
+            <p><span data-l="fr">Le nom, la devise, le pays et le transporteur viennent de la marque : le tableau de bord compte en dinars libyens et le menu affiche Shipeh au lieu de Sendit.</span><span data-l="en">Name, currency, country and carrier come from the brand: the dashboard counts in Libyan dinars and the menu shows Shipeh instead of Sendit.</span></p>
+            <img class="shot-m" src="img/rawa-admin-dashboard.jpg" alt="" loading="lazy">
+          </div>
+          <div class="step">
+            <span class="n">02</span>
+            <h4><span data-l="fr">Des commandes en arabe</span><span data-l="en">Orders in Arabic</span></h4>
+            <p><span data-l="fr">Noms, villes et produits en arabe s'affichent dans le bon sens au milieu d'une interface en français, avec les mêmes statuts et le même suivi que TechZone.</span><span data-l="en">Arabic names, cities and products display in the right direction inside a French interface, with the same statuses and tracking as TechZone.</span></p>
+            <img class="shot-m" src="img/rawa-admin-orders.jpg" alt="" loading="lazy">
+          </div>
+          <div class="step">
+            <span class="n">03</span>
+            <h4><span data-l="fr">Un catalogue séparé</span><span data-l="en">A separate catalogue</span></h4>
+            <p><span data-l="fr">Chaque boutique a ses produits, ses catégories et ses photos d'utilisation, sur la même API et le même serveur, déployée sans reconstruire l'autre.</span><span data-l="en">Each store has its own products, categories and usage photos on the same API and server, and deploys without rebuilding the other.</span></p>
+            <img class="shot-m" src="img/rawa-admin-products.jpg" alt="" loading="lazy">
+          </div>
+        </div>
+        <div class="view">
+          <div class="glow"></div>
+          <div class="dev">
+            <div class="chrome"><span></span><span></span><span></span><em>admin.rawabeauty.com</em></div>
+            <div class="screens">
+              <img class="on" src="img/rawa-admin-dashboard.jpg" alt="Administration Rawa Beauty — tableau de bord" loading="lazy">
+              <img src="img/rawa-admin-orders.jpg" alt="Administration Rawa Beauty — commandes" loading="lazy">
+              <img src="img/rawa-admin-products.jpg" alt="Administration Rawa Beauty — produits" loading="lazy">
+            </div>
+          </div>
+          <div class="dots"><i class="on"></i><i></i><i></i></div>
+          <p class="caption"><span data-l="fr">Clients et chiffres fictifs, pour protéger les vraies données.</span><span data-l="en">Customers and figures are fictitious, to protect real data.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Défis et solutions -->
   <section id="defis" style="padding-top:110px">
     <div class="wrap">
@@ -678,7 +822,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       </h2>
       <div class="others">
         <article class="card tilt rv">
-          <span class="num">02</span>
+          <span class="num">03</span>
           <h3>TikTok App</h3>
           <p class="sub"><span data-l="fr">Back-office et automatisations</span><span data-l="en">Back office and automation</span></p>
           <p>
@@ -689,7 +833,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <a class="go" href="https://github.com/ynaib123/TikTok_App" target="_blank" rel="noopener">GitHub ↗</a>
         </article>
         <article class="card tilt rv d1">
-          <span class="num">03</span>
+          <span class="num">04</span>
           <h3><span data-l="fr">Réservation d'hôtel</span><span data-l="en">Hotel booking</span></h3>
           <p class="sub"><span data-l="fr">Application .NET, projet de cours</span><span data-l="en">.NET application, course project</span></p>
           <p>
@@ -736,7 +880,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <a class="btn ghost mag" href="https://www.linkedin.com/in/naib-youssef-8340442a9" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a class="btn ghost mag" href="https://github.com/ynaib123" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
-      <p class="print-only">Youssef Naib · youssefnaib6@gmail.com · linkedin.com/in/naib-youssef-8340442a9 · github.com/ynaib123 · techzone-maroc.com</p>
+      <p class="print-only">Youssef Naib · youssefnaib6@gmail.com · linkedin.com/in/naib-youssef-8340442a9 · github.com/ynaib123 · techzone-maroc.com · rawabeauty.com</p>
     </div>
   </section>
 </main>
